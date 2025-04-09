@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+ 
+        a:visited {
+            color: gray;
+        }
+
+        a:hover {
+            color: red;
+            text-decoration: underline;
+        }
+
+        input:focus {
+            border: 2px solid blue;
+            background-color: #e0f7fa;
+        }
+
+        li:nth-child(odd) {
+            background-color: #f9fbe7;
+        }
+
+        li:nth-child(even) {
+            background-color: #e0f2f1;
+        }
+
+      
+        p::first-letter {
+            font-size: 30px;
+            color: darkblue;
+        }
+
+        p::first-line {
+            font-weight: bold;
+        }
+
+        .box::before {
+            content: "👉 ";
+            color: green;
+        }
+
+        .box::after {
+            content: " ✔";
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>CSS Pseudo-Class & Pseudo-Element Demo</h2>
+
+    <a href="#">Hover or Visit this Link</a><br><br>
+
+    <input type="text" placeholder="Focus to see effect"><br><br>
+
+    <ul>
+        <li>List item 1</li>
+        <li>List item 2</li>
+        <li>List item 3</li>
+        <li>List item 4</li>
+    </ul><br>
+
+    <p>This paragraph demonstrates the use of pseudo-elements like first-letter and first-line. The styles only affect
+        specific parts of the paragraph.</p>
+
+    <div class="box">This uses ::before and ::after</div>
+
+</body>
+
+</html>

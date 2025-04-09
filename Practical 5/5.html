@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .animated-box {
+            width: 100px;
+            height: 100px;
+            background-color: #ff6347;
+            position: relative;
+            animation-name: slideAndColorChange;
+            animation-duration: 4s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            border-radius: 10px;
+            text-align: center;
+            line-height: 100px;
+            color: white;
+            font-weight: bold;
+        }
+
+        @keyframes slideAndColorChange {
+            0% {
+                left: 0;
+                background-color: #ff6347;
+                transform: scale(1);
+            }
+
+            50% {
+                left: 200px;
+                background-color: #4caf50;
+                transform: scale(1.2);
+            }
+
+            100% {
+                left: 0;
+                background-color: #2196f3;
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>CSS Animation Demo</h2>
+
+    <div class="animated-box">Animate</div>
+
+</body>
+
+</html>
