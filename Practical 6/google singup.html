@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Gmail Sign Up</title>
+    <style>
+        body {
+            width: 100%;
+            height: 100%;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #fff;
+            color: #333;
+        }
+
+        header {
+            padding: 20px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        header img {
+            height: 40px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            padding: 30px;
+            max-width: 100vw;
+            margin: auto;
+        }
+
+        .left {
+            width: 50%;
+        }
+
+        .left>table img {
+            width: 200px;
+        }
+
+        .left img {
+            width: 100%;
+            height: 100%;
+            margin-bottom: 20px;
+        }
+
+        .left h2 {
+            color: #d93025;
+        }
+
+        .left p {
+            margin-bottom: 20px;
+        }
+
+        .right {
+            width: 50%;
+            height: 100%;
+            /* border-left: 1px solid #ccc; */
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+
+        form {
+            background-color: #dadada;
+            border: 2px solid black;
+            width: 100%;
+            height: 100%;
+            padding: 20px;
+        }
+
+        form table {
+            width: 100%;
+            height: 100%;
+        }
+
+        #submit {
+            background-color: blue;
+            padding: 10px;
+            color: white;
+            border-radius: 5px;
+        }
+
+        .captcha {
+            width: 200px;
+            height: 50px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_92x30dp.png" alt="Google">
+    </header>
+
+    <div class="container">
+        <!-- Left Side -->
+        <div class="left">
+            <h2>Create a new Google Account</h2>
+            <table>
+                <tr>
+                    <td>
+                        <img src="https://www.gstatic.com/images/branding/product/2x/googleg_64dp.png"
+                            alt="Google Services">
+
+                    </td>
+                    <td>
+                        <p><strong>Your Google Account is more than just Gmail.</strong> Talk, chat, share, schedule,
+                            store,
+                            organize, collaborate, discover, and create…</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="https://th.bing.com/th/id/OIP.QMvnKQHSbuam7zgPPWIqxAHaEK?rs=1&pid=ImgDetMain"
+                            alt="image">
+                    </td>
+                    <td>
+                        <p><strong>Take it all with you.</strong> A Google Account lets you access your stuff from any
+                            device…</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="https://thumbs.dreamstime.com/z/google-18250175.jpg" alt="image">
+                    </td>
+                    <td>
+                        <p><strong>Share a little. Or share a lot.</strong> Share selectively with friends, family, or
+                            just follow
+                            posts from people who fascinate you…</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="https://cdn.analyticsvidhya.com/wp-content/uploads/2024/04/Google_to_make_generative_AI-powered_search_exclusive_to_paid-tier-_Report-scaled.jpg"
+                            alt="image">
+                    </td>
+                    <td>
+                        <p><strong>Work in the future.</strong> Get a jump on the next era of doing everything. Watch as
+                            colleagues
+                            drop in a photo or edit a document live…</p>
+                    </td>
+                </tr>
+            </table>
+
+
+
+
+        </div>
+
+        <!-- Right Side -->
+        <div class="right">
+            <form action="#">
+                <table>
+                    <tr>
+                        <td>Name
+                            <br>
+                            <input type="text" placeholder="First">
+                        </td>
+                        <td><br>
+                            <input type="text" placeholder="Second">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            Choose Your Username
+                            <br>
+                            <input type="text" placeholder="enter user name">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            Create a Password
+                            <br>
+                            <input type="password" name="password">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            Confirm Your Password
+                            <br>
+                            <input type="password">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            Birthday
+                            <br>
+                            <input type="date">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            Gender
+                            <br>
+                            <select name="Gender" id="Gender">
+                                <option value="none" selected>I am..</option>
+                                <option value="Male">Male</option>
+                                <option value="Woman">Woman</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            Mobile Phone
+                            <br>
+                            <input type="number" name="number" value="+91">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            Your current email address
+                            <br>
+                            <input type="email">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Prove You're not a robot
+                            <br>
+                            <input type="checkbox"> Skip this verification(Phone verification may be required)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <table>
+                                <tr>
+                                    <td><img class="captcha"
+                                            src="https://images.fastcompany.net/image/upload/w_1280,f_auto,q_auto,fl_lossy/fc/captcha-internet-translate.jpg"
+                                            alt="captcha"></td>
+                                    <td>
+                                        <img class="captcha"
+                                            src="https://th.bing.com/th/id/OIP.e-FmeUfoSRQZ-uuZKeMsOwHaCQ?rs=1&pid=ImgDetMain"
+                                            alt="captcha">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Type the two pieces of text
+                                        <br>
+                                        <input type="text">
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            Location
+                            <br>
+                            <select name="Location" id="location">
+                                <option value="none" selected>Choose your location</option>
+                                <option value="India">India</option>
+                                <option value="USA">USA</option>
+                                <option value="UK">UK</option>
+                                <option value="Canada">Canada</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <input type="checkbox"> I agree to the Google Terms of Service and Privacy Policy
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <input type="checkbox">
+                            Google may use my account information to personalize +1's on content and ads on non-Google
+                            websites. About personlization.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="right" width="100%">
+                            <input id="submit" type="submit" value="Next step">
+                        </td>
+                    </tr>
+                </table>
+            </form>
+            <p>Learn more about why we ask for this information</p>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
