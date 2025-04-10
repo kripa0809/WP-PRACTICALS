@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Word Search in Sentence</title>
+</head>
+
+<body>
+
+    <h2>Search a Word in a Sentence</h2>
+    <p>Sentence: <strong id="sentenceDisplay"></strong></p>
+
+    <label for="wordInput">Enter word to search:</label>
+    <input type="text" id="wordInput" placeholder="Type word here">
+    <button onclick="searchWord()">Search</button>
+
+    <p id="result"></p>
+
+    <script>
+        // Sentence stored in array (split by words)
+        const sentence = "JavaScript is a powerful scripting language".split(" ");
+
+        // Display sentence on page
+        document.getElementById("sentenceDisplay").textContent = sentence.join(" ");
+
+        function searchWord() {
+            const word = document.getElementById("wordInput").value.trim();
+            let index = -1;
+
+            // Loop through the array to search for the word
+            for (let i = 0; i < sentence.length; i++) {
+                if (sentence[i].toLowerCase() === word.toLowerCase()) {
+                    index = i;
+                    break;
+                }
+            }
+
+            // Display result
+            const resultText = index !== -1
+                ? `The word "${word}" was found at index: ${index}`
+                : `The word "${word}" was not found in the sentence.`;
+
+            document.getElementById("result").textContent = resultText;
+        }
+    </script>
+
+</body>
+
+</html>

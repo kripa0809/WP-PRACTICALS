@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Question-2</title>
+</head>
+
+<body>
+  <p>Write a JavaScript, that uses function to calculate how many days are left in your birthday.</p>
+  Enter Your Birthdate: <input type="date" id="date" name="date">
+  <br>
+  <br>
+  <button id="button">Enter</button>
+  <div id="answare"></div>
+
+  <script>
+    var date = document.getElementById("date")
+    var answare = document.getElementById("answare")
+    function getDays() {
+      var birthdate = date.valueAsDate
+      var nextbirthdate;
+      var curruntDate = new Date;
+
+      if (birthdate.getMonth() < curruntDate.getMonth()) {
+        nextbirthdate = birthdate;
+        nextbirthdate.setYear(curruntDate.getFullYear() + 1);
+        console.dir(nextbirthdate);
+      }
+      else if (birthdate.getMonth() == curruntDate.getMonth() && birthdate.getDate() < curruntDate.getDate()) {
+        nextbirthdate = birthdate;
+        nextbirthdate.setYear(curruntDate.getFullYear() + 1);
+        console.dir(nextbirthdate);
+      }
+      else {
+        nextbirthdate = birthdate;
+        nextbirthdate.setYear(curruntDate.getFullYear());
+      }
+      var time_diffrence = nextbirthdate.getTime() - curruntDate.getTime()
+      var days = Math.floor(time_diffrence / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((time_diffrence / (1000 * 60 * 60 * 24) - days) * 24)
+      var minits = Math.floor((((time_diffrence / (1000 * 60 * 60 * 24) - days) * 24) - hours) * 60);
+      var second = Math.floor((((((time_diffrence / (1000 * 60 * 60 * 24) - days) * 24) - hours) * 60) - minits) * 60);;
+      if (days >= 0) {
+        answare.innerHTML = `
+        <h1>Your birtheday is in</h1>
+        <h2> ${days} Days <br> ${hours} Hours <br> ${minits} Minits <br> ${second} Second </h2>
+        `
+      }
+      else {
+        answare.innerHTML = `
+        <h1>Happy Birthday it's Your Day buddy</h1>
+        `
+        answare.style.color = "blue"
+      }
+    }
+    document.getElementById("button").addEventListener("click", function () {
+      answare.style.color = "black"
+      if (date.value == "") {
+        answare.innerText = " please enter yout birthdate";
+
+        answare.style.color = "red";
+        return
+      }
+      getDays()
+      // getDays();
+
+    })
+  </script>
+</body>
+
+</html>

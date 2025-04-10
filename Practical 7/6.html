@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Mouse Events Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        h1 {
+            color: black;
+            cursor: pointer;
+        }
+
+        button {
+            margin: 10px 10px 10px 0;
+            padding: 10px 15px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 id="mainHeading">Hover over me!</h1>
+
+    <button onclick="showTime()">Find Time</button>
+    <button onclick="changeBackground('red')">Red</button>
+    <button onclick="changeBackground('green')">Green</button>
+
+    <p id="output"></p>
+
+    <script>
+        // Handle mouse over and mouse out for heading
+        const heading = document.getElementById("mainHeading");
+
+        heading.addEventListener("mouseover", () => {
+            heading.style.color = "yellow";
+        });
+
+        heading.addEventListener("mouseout", () => {
+            heading.style.color = "black";
+        });
+
+        // Show current time and date
+        function showTime() {
+            const now = new Date();
+            document.getElementById("output").textContent =
+                "Current Date & Time: " + now.toString();
+        }
+
+        // Change background color
+        function changeBackground(color) {
+            document.body.style.backgroundColor = color;
+        }
+    </script>
+
+</body>
+
+</html>

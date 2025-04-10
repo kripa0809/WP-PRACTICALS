@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question-1</title>
+</head>
+
+<body>
+    <p>Write an HTML and JavaScript program which accepts N as input and displays first N
+        Fibonacci numbers as list.</p>
+    Enter number N: <input type="number" id="number" name="number">
+    <br>
+    <br>
+    <button id="button">get Fibonacci numbers</button>
+    <p id="answare" style="font-size: larger;"></p>
+
+    <script>
+        function getFibonacci() {
+            var answare = document.getElementById("answare");
+            var number = document.getElementById("number").value;
+            var n = Number(number);
+            if (number === "") {
+                answare.innerText = "enter number first"
+                answare.style.color = "red"
+
+            }
+            else {
+                var list = [0, 1];
+                var first = list[0];
+                var second = list[1];
+                for (var i = 3; i <= n; i++) {
+                    var next = first + second;
+
+                    list.push(next);
+                    first = second;
+                    second = next;
+                }
+                answare.innerText = list;
+                answare.style.color = "blue"
+            }
+
+        }
+        var button = document.getElementById("button");
+        button.onclick = function (e) {
+            getFibonacci();
+        }
+    </script>
+</body>
+
+</html>

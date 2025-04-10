@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Digit Power Calculator</title>
+</head>
+
+<body>
+
+    <h2>Multiply First Digit by Itself (Second Digit Times)</h2>
+
+    <label for="twoDigit">Enter a 2-digit number:</label>
+    <input type="number" id="twoDigit" placeholder="e.g. 23" min="10" max="99">
+    <button onclick="calculatePower()">Calculate</button>
+
+    <p id="result"></p>
+
+    <script>
+        function calculatePower() {
+            const input = document.getElementById("twoDigit").value;
+
+            if (input.length !== 2) {
+                document.getElementById("result").textContent = "Please enter a valid 2-digit number.";
+                return;
+            }
+
+            const firstDigit = parseInt(input[0]);
+            const secondDigit = parseInt(input[1]);
+
+            const result = Math.pow(firstDigit, secondDigit);
+
+            document.getElementById("result").textContent = `${firstDigit} raised to the power ${secondDigit} is: ${result}`;
+        }
+    </script>
+
+</body>
+
+</html>

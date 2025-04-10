@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Odd Position Characters</title>
+</head>
+
+<body>
+
+    <h2>Print Characters at Odd Positions</h2>
+
+    <label for="inputString">Enter a string:</label>
+    <input type="text" id="inputString" placeholder="Type here...">
+    <button onclick="printOddCharacters()">Show Odd Position Characters</button>
+
+    <p id="result"></p>
+
+    <script>
+        function printOddCharacters() {
+            const str = document.getElementById("inputString").value;
+            let result = "";
+
+            for (let i = 0; i < str.length; i++) {
+                if (i % 2 === 0) { // odd position (1-based), i.e., 0, 2, 4 in 0-based index
+                    result += str[i] + " ";
+                }
+            }
+
+            document.getElementById("result").textContent =
+                "Characters at odd positions: " + result.trim();
+        }
+    </script>
+
+</body>
+
+</html>
